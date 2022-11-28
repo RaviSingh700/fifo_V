@@ -71,12 +71,6 @@ class fifo_sequence extends uvm_sequence#(fifo_trans);
         finish_item(tr);
       end 
     
-    repeat(50)
-      begin
-        tr=new("trans");
-        start_item(tr);
-        void'(tr.randomize() with {rst_n==1;});
-        finish_item(tr);
-      end 
+  
   endtask
 endclass
